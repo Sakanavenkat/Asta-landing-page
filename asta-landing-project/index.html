@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTA — Talk to your AI, don't type it</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo"><span class="logo-dot"></span> ASTA</div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tech">Tech stack</a></li>
+        <li><a href="https://llm-chatbot-asta-production.up.railway.app" class="nav-cta" target="_blank" rel="noopener">Try ASTA</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">● Voice-first · Powered by Groq Llama 3.3 70B</span>
+        <h1>Type less. <span class="accent">Just talk</span> to your AI.</h1>
+        <p class="hero-sub">ASTA is a voice-in, voice-out AI assistant. Speak your question, and get a spoken answer back in real time — no typing, no waiting on a spinner.</p>
+        <div class="hero-actions">
+          <a href="https://llm-chatbot-asta-production.up.railway.app" class="btn-primary" target="_blank" rel="noopener">Try ASTA live →</a>
+          <a href="https://github.com/Sakanavenkat/LLM-Chatbot-ASTA" class="btn-secondary" target="_blank" rel="noopener">View the code</a>
+        </div>
+      </div>
+
+      <div class="waveform" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">The flow</span>
+        <h2>Three steps, one conversation</h2>
+        <p>Every exchange with ASTA follows the same real-time loop — this is the actual order it happens in, not just a design device.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div>
+            <h3>You speak</h3>
+            <p>Your voice is captured in the browser and streamed to ASTA's backend — no typing required.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div>
+            <h3>ASTA thinks</h3>
+            <p>Speech is transcribed and passed to Groq's Llama 3.3 70B for a fast, context-aware response.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div>
+            <h3>ASTA replies</h3>
+            <p>The response is converted back to speech and played to you — a full voice round-trip.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mini-wave" aria-hidden="true">
+    <span style="height:8px;"></span><span style="height:16px;"></span><span style="height:10px;"></span>
+    <span style="height:20px;"></span><span style="height:12px;"></span><span style="height:18px;"></span>
+    <span style="height:8px;"></span><span style="height:14px;"></span>
+  </div>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">What it does</span>
+        <h2>Built for real conversation</h2>
+        <p>Not a chatbot with a mic bolted on — voice is the primary interface.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3>Voice in, voice out</h3>
+          <p>Full duplex voice interaction — speak and hear responses, no reading required.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Real-time responses</h3>
+          <p>Groq's inference speed keeps the back-and-forth feeling like an actual conversation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Llama 3.3 70B</h3>
+          <p>A large, capable model handles reasoning, not a lightweight stand-in.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛠️</div>
+          <h3>FastAPI backend</h3>
+          <p>A lean Python backend serves the model and handles audio processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section id="tech" class="tech-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Under the hood</span>
+        <h2>Tech stack</h2>
+      </div>
+      <div class="tech-badges">
+        <span class="tech-badge">FastAPI</span>
+        <span class="tech-badge">Groq — Llama 3.3 70B Versatile</span>
+        <span class="tech-badge">HTML / CSS / JS</span>
+        <span class="tech-badge">Web Speech API</span>
+        <span class="tech-badge">Railway</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER CTA ============ -->
+  <section class="footer-cta">
+    <div class="container">
+      <h2>Ready to have a conversation instead of a conversation window?</h2>
+      <div class="hero-actions">
+        <a href="https://llm-chatbot-asta-production.up.railway.app" class="btn-primary" target="_blank" rel="noopener">Try ASTA live →</a>
+        <a href="https://github.com/Sakanavenkat/LLM-Chatbot-ASTA" class="btn-secondary" target="_blank" rel="noopener">View the code</a>
+      </div>
+    </div>
+  </section>
+
+  
+
+</body>
+</html>
